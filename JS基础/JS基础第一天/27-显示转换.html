@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    // 显示转换
+      // 编写程序时过度依靠系统内部的隐式转换是不严谨的 因为隐式转换规律并不清洗 大多数是靠经验总结的规律
+        // 为了避免因隐式转换带来的问题 通常根据逻辑需要对数据进行显示转换
+      // 概念
+        // 自己写代码告诉系统该转换成什么类型
+      // 转换为数字型
+        // Number(数据) 
+
+        // let str = '123'
+        // console.log(Number(str))  // number 变为数字型
+        // console.log(Number('pink'))  // NaN  因为不知道他是什么类型 他不是一个数字
+        // let num = Number(prompt('输入你的年薪'))
+
+        // console.log(Number(num))  // 变为了数字型
+
+        // let num = +prompt('请输入你的年薪')
+        // console.log(num)  // 数字型搭配上面的+ 隐式转换
+
+    // parseint(数据)
+      // 只保留整数
+    // parseFloat(数据)
+      // 可以保留小数
+    console.log(parseInt('12px'))  // 12 因为取整数 他不认识px
+    console.log(parseInt('12.22px'))  // 12 整数
+    console.log(parseInt('abc12.22px'))  // NaN 因为不认识 
+
+    console.log(parseFloat('12.22px'))   // 12.22 因为可以取小数  px不认识不要
+    console.log(parseFloat('abc12.22px'))  //   NaN 因为不认识
+      
+
+    // 转换为字符型   
+      // String(数据)
+      // 变量.toString(进制)
+
+  </script>
+</body>
+</html>

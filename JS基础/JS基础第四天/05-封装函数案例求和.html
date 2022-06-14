@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 学生分数是一个数组 计算每一个学生的总分
+    // 1. 封装函数
+    // 给参数默认值
+    function getArrSum(arr = []) {
+      let sum = 0
+      for(let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+      }
+      console.log(sum)
+    }
+    getArrSum([1,2,3,4,5])
+    getArrSum([111,222,333])
+
+    // getArrSum()  // 报错 undefined没有长度  但是上面arr = [] 
+    getArrSum()  // 0
+
+    
+  </script>
+</body>
+
+</html>

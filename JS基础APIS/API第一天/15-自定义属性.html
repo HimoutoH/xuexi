@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div data-id="1" data-spm="不知道">1</div>
+  <div data-id="2">2</div>
+  <div data-id="3">3</div>
+  <div data-id="4">4</div>
+  <div data-id="5">5</div>
+    <script>
+
+       // 自定义属性
+      // 标准属性：标签天生自带的属性 比如class id title等 可以直接使用点语法操作比如：disabled checked selected
+      // 自定义属性：
+        // 在html5中推出来专门的data-自定义属性
+        // 在标签上一律以data开头
+        // 在dom对象上一律以dataset对象方式获取
+      // 语法
+        /*
+        <bod>
+            <div class='box' data-id='10'>盒子</div>
+            <scrip>
+              const box = document.querySelector('.box')
+              console.log(box.dataste.id)  
+            </scrip>
+        </bod>
+        */
+
+        const one = document.querySelector('div')
+        // set集合的意思
+        console.log(one.dataset.spm)   // 这样就可以拿到不知道
+        console.log(one.dataset.id)   // 这样就可以拿到1
+    </script>
+</body>
+</html>

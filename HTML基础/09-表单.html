@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单补充</title>
+</head>
+
+<body>
+    <form action="./target.html">
+        用户名 <input type="text" name="username">
+        <br><br>
+        <!-- 
+            密码框依然使用 input开创建
+                它的type属性是password
+                必须使用name属性要么提交不上去
+        -->
+        密码框 <input type="password" name="password">
+        <br><br>
+        <!-- 
+            使用input来创建单选按钮
+                它的type属性是radio
+            
+            选择的按钮通过name属性进行分组的
+                name相同的属于同一组
+                问题传上去的都是on 出现毛病了
+            
+            像这种不需要用户填写的选择框
+                还必须写一个value属性
+                value的值最终会提交给服务器
+            
+            可以通过checked属性来设置默认选中
+        -->
+        性别 <input name="gender" type="radio" value="male">男
+        <input name="gender" type="radio" value="female" checked="checked">女
+        <br><br>
+        <!-- 
+                使用input创建多选框
+                    它的type属性是checkbox
+            -->
+        爱好 <input type="checkbox" name="hobby" value="tiao">跳
+        <input type="checkbox" name="hobby" value="chang">唱
+        <input type="checkbox" name="hobby" value="lanqiu" checked>打篮球
+        <!-- 上面的默认选中 checked =“checked” 后面的等于号可以省略不写 -->
+        <input type="checkbox" name="hobby" value="rap">rap
+
+        <br><br>
+
+        <!-- 
+            下拉列表
+                - 使用select创建一个下拉列表
+                - 在 select中使用option来添加列表项
+
+                下拉列表的name属性需要指定给select
+                value属性需要指定给option
+                通过selected 设置 默认选中
+
+        -->
+        你最喜欢的老师
+        <select name="teacher">
+            <option value="li">李老师</option>
+            <option selected value="pink">pink老师</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="提交">
+
+        <!-- 重置按钮 -->
+        <input type="reset">
+        
+        <!-- 普通按钮 -->
+        <input type="button" value="按钮">
+
+        <br><br>
+        <!-- 
+            button也可以用来创建按钮
+                type值同样也有三个
+                    submit
+                    reset
+                    button
+
+        -->
+
+        <button type="submit">提交：</button>
+        <button type="reset">重置；</button>
+        <button type="button">按钮；</button>
+    </form>
+</body>
+
+</html>

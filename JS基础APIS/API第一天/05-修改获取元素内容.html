@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">我是文字内容</div>
+  <script>
+
+    const obj = {
+      name:'pink老师',
+      age: 18
+    }
+    console.log(obj.name)
+    obj.name  = 'red老师'
+    // 操作元素内容
+      // 对象.innerText属性
+        // 将文本内容添加 / 更新到任意标签位置
+        // 显示纯文字 不解析标签
+
+      // 对象.innerHTML属性
+        // 将文本内容添加 / 更新到任意标签位置
+        // 会解析标签 多标签建议使用模板字符串
+    
+  // 1. 获取元素  innerText
+      // const box = document.querySelector('.box')
+  // 2. 修改文字内容  对象.innerText属性
+      // box.innerText = '看看我在不在'
+      // console.log(box.innerText)   // 获取文字内容
+      // box.innerText = '<strong>我是innertext</strong>'  // 修改文字内容   不识别标签
+
+  
+
+  // 1. 获取元素  innerHTML
+    const box = document.querySelector('.box')
+  // 2. 修改文字内容
+    // box.innerHTML = '我要更换'
+    box.innerHTML = '<strong>我要更换</strong>'   // 会解析标签
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    安装完git 需要设置 在命令行输入
+      git config --global user.name "用户名"
+      git config --global user.email "email@example.com"
+        备注：以上两步的名字和邮箱可随意配置 但最好使用自己的邮箱
+      git config user.name 用于查看配置的名字
+      git config user.email 用于查看配置的邮箱
+  -->
+
+  <!-- 
+    mkdir xxx  新建文件夹  xxx是文件夹的名字
+    vi  x.txt  新建文件 x是文件的名字
+        i 进入编辑模式
+        esc :  wq退出并保存
+        esc :  q!不保存退出
+
+  cd xxx  进入xxx目录
+  cd.. 返回上一局目录
+  ls  累出当前文件夹所有文件
+  pwd 显示当前目录
+  cat x.txt 显示文件内容
+  clear  清屏
+  -->
+
+  <!--
+    工作区  版本区   暂存区
+      工作区  简单的理解   你在电脑能看到目录
+      暂存区  介于工作和版本区中间 工作区到版本区的必经之路
+      版本去  工作区有一个隐藏目录.git 准确的来说这个不算工作区 而是git版本库
+          git init 初始化   master主分支
+          git add 把文件添加到暂存区 
+          git commit -m '提交信息' 把暂存区的所有内容提交到当前版本库
+
+          warning: LF will be replaced by CRLF in a.txt 会出现这个警告
+            解决方案 git config --global core.autocrlf false
+
+            git commit -m 提交后出现证明提交成功 
+            [master (root-commit) 20240b7] tihs is NO.1 commit
+            1 file changed, 4 insertions(+)
+            create mode 100644 a.txt
+
+
+        git status 查看暂存区内容
+        git add . 提交所有文件
+        git diff 比较暂存区与工作区
+        git diff --cached 比较版本区与暂存区
+        git diff master 比较版本区与工作区
+        git log 显示从最近到最远的所有提交日志
+        git reflog 显示每次提交的commit的commit id
+  -->
+
+  <!--
+      git reset --hard HEAD^ 版本回退 (回退一次提交)
+      git reset --hard 版本号 回退到指定版本号的commit 的id
+      git reset HEAD  用版本库中的文件去替代暂存区的全部文件
+      git checkout --x.txt  用暂存区指定文件去替换工作区指定文件(危险)
+      git checkout HEAD x.txt 用版本库中的文件替换暂存区的文件(危险)
+      git rm --cached x.txt 从暂存区删除文件
+
+    -->
+
+  <!--
+          git rm x.txt  删除文件
+          git rm -r xxxx  删除文件夹  文件夹里有东西 被git管理了才可以就是文件夹里面有东西 git add ..  git commit -m 'this is no1'
+    -->
+
+  <!--
+      git
+        - 主分支 master         ----- 代码经过了开发人员单元测试 以及测试人员详细的一套测试通过之后 确定没有问题
+        - 开发分支 dev          ----- 开发人员所有代码提交到此分支
+        - 测试分支 test         ----- 测试人员用的(有开发人员进行单元人员测试的代码放入到此分支)
+        - 里程碑分支 tags       ----- v1.0.0  v1.0.1
+          1.0.0
+            第一位：大版本号
+            第二位：
+            第三位：bug 
+      测试分类： 回归测试   压力测试   性能测试   单元测试
+
+        git checkout -b dev 创建dev分支 并切换到dev分支
+        git branch  查看当前分支
+        git checkout master 切换分支
+        git merge dev 合并dev分支到主分支  需要站在主分支上
+        git branch -d dev 删除dev 指定分支
+        git diff branch1 branch2 显示出两个分支之间所有差异文件的详细差异
+        git diff branch1 branch2 --stat 显示出两个分支之间所有差异的文件列表
+        git diff branch1 branch2 xxx 显示指定文件的详细差异
+    -->
+
+  <!--
+      ls 查看分支有什么东西
+      cat  文件名 查看文件写什么
+  -->
+
+  <!--
+        github本地仓库与远程库交互 ---- 
+          https://github.com/HimoutoH/0614-demo.git
+          git remote add origin https://github.com/HimoutoH/0614-demo.git
+          origin叫什么都行 可以叫peiqi  xiaohua
+          然后 git push -u peiqi master  第一次推送最好加上 -u 可以不加 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/HimoutoH/0614-demo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'peiqi/master'.
+出现这玩意推送成功
+
+
+      修改推送 git push peiqi master  然后这样提交一次就可以了  
+
+      正常不出现密码 如果出现密码就执行
+      git config --global credntial.helper store 
+    如果第一次仓库地址 https://github.com/HimoutoH/0614-demo.git 
+      关联错了 你可以 删除 init 那个命令的.git重新关联
+      或者 git remote remove peiqi  佩奇就是自己起的名字
+    -->
+
+  <!--
+        第一种拉取方法 git pull peiqi master
+        将远程仓库master 分支上的代码复制合并到本地master分支上
+
+        第二种 git fetch master:tmp
+
+        新建一个tmp分支 将远程仓库master分支上的代码版本赋值到tmp分支上不会自动合并
+
+        克隆分子 只在第一次获取远程仓库的才需要使用
+        git clone https://github.com/xxxx.git (https)
+
+    -->
+
+  <!--
+      git 的三区(git init      git add .     git commit -m '提交信息')
+      git reset --hard HEAD^ 版本回退 (回退一次提交)
+      分支 (创建 切换 管理 常见的分支)
+      git 与github的交互
+        场景一 推送 本地有仓库 远程为空 将代码推送给远程库
+        场景二 拉取 要获取到远程库的东西
+        场景三 克隆 本地没有仓库要从远程库获取完整的库
+        场景四 带有分支的上述操作
+
+
+    -->
+
+</body>
+
+</html>

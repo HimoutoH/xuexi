@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    // 单选框 表单 多选框取过来的值就是字符串型 此时我们就不能直接简单的加法运算
+    // let num1 = prompt('请输入第一个数：')
+    // console.log(typeof num1)
+
+    // 此时我们需要转换变量的数据类型 
+
+    // 隐式转换
+      // 某些运算符被执行时 系统内部会将数据类型进行转换 这种转换我们称为隐式类型转换
+        // 规则
+          // + 号 两边只要有一个是字符串 就会把另外一个转成字符串
+          // 除了+ 以外的算数符 / * - 都会把数据类型转成数字类型
+        // 缺点
+          // 转换类型不明确 靠经验才能总结
+        // 小技巧
+          // +号作为正号解析可以转换成数字型
+          // 任何数据个和字符串相加结果都是字符串
+          console.log(1 + 1)  // 2 number 数字型
+          console.log('pink' + 1)  // pink1   string 字符串
+
+
+          console.log(2 + 2)  // 4
+          console.log(2 + '2' )  // 22
+          console.log(2 - 2 )  // 0
+          console.log(2- '2') // 0   隐式转换 都会把后面转换为数字  除了加号不会转换
+
+
+          console.log(+12)  // 12 
+          console.log(+'123')  // 123 转换为数字
+  </script> 
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    //用户输入一个数 如果数字小于10 则前面补0 比如09 03等
+    // 分析 
+    // 为后期页面显示实现做铺垫
+    // 利用三元运算符补0计算
+    let num = +prompt('请输入一个数')
+    num = num < 10 && num >= 1 || num === 0 ? "0" + num  : num
+    alert(num)
+  </script>
+</body>
+</html>

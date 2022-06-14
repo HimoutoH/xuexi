@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 数组本质是数据的集合 操作数据无非就是增删改查语法：
+    // 查 数组[下标]
+    // 改 数组[下标] = 新值
+    // 增 arr.push(新增的内容)      arr.unshift(新增的内容)
+    // 删 arr.pop()  arr.shift()   arr.splice(操作的下标 删除的个数)
+
+      // let arr = []
+      // console.log(arr)
+      // // console.log(arr[0])  //undefined
+      // arr[0] = 1
+      // arr[1] = 5
+      // console.log(arr)
+
+
+      let arr = ['pink','red','green']
+      // 修改
+      // arr[0] = 'hotpink'
+      
+      // 给所有的数组元素后面加个老师
+      for(let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] + '老师'
+      }
+
+      console.log(arr)
+
+
+
+
+  </script>
+</body>
+</html>

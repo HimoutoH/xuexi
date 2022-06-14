@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 利用双重for循环来做
+    // 外层循环控制打印行 内循环控制每行列数 
+    // 内层循环的合数跟第几行是一一对应的
+    for(let i = 1; i <= 5; i++) {
+      for(let j = 1; j <= i; j++){
+        document.write('☆')
+      }
+      document.write('<br>')
+    } 
+      document.write('<br>')
+
+    for (let k = 1; k <= 5; k++) {
+      for (let l = k; l <= 5; l++) {
+        document.write('☆')
+      }
+      document.write('<br>')
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    // function getSum (){
+    //   let num1 = +prompt('请输入第一个数')
+    //   let num2 = +prompt('请输入第二个数')
+    //   console.log(num1+ num2)
+    // }
+    // getSum()
+
+    // 这样的函数只能求 10 + 20 这个函数功能局限性非常大
+
+    // 参数语法声明 
+    /*
+      function 函数名(参数列表) {
+        函数体
+      }
+      function getSquare(num1) {
+        document.write(num * num1) 
+      }
+
+      function getSum(num1,num2) {
+        document.write(num1 + num2)
+      }
+    */
+    // 参数列表
+    // 传入数据列表
+    // 声明这个函数需要传入几个数据
+    // 多个数据用逗号隔开
+
+    // 掉用语法
+    // 函数名(传递的参数列表)
+    // getSquare(8)
+    // getSum(10,20)
+
+    // function getSum(end) {   // end  = 50
+    //   let sum = 0
+    //   for(let i = 1; i <= end; i++) {
+    //     sum = sum + i
+    //   }
+    //   console.log(sum)
+    // }
+    // getSum(50)   // 1  -  50累加和
+    // getSum(75)   // 1 - 75累加和
+    // getSum(30)    // 1 - 30累加和
+
+    // function getSum(start,end) {   // 形参  形式上的参数
+    //   let sum = 0
+    //   for(let i = start; i <= end; i++) {
+    //     sum = sum + i
+    //   }
+    //   console.log(sum)
+    // }
+    // getSum(30,50)  // 实参 简单说就是实际的参数  调用小括号里面
+    // getSum(100,101)
+    // getSum(200,500)
+    // 形参可以理解为是这个函数内部声明的变量 比如(end = 50) 实参可以理解为是给这个变量赋值、
+    // 开发中尽量保证实参和形参保持一致
+
+
+    // 函数求和
+    function getSum(num1, num2) {
+      // num1默认的值是undefined
+      document.write(num1 + num2)
+    }
+    getSum(10,20)
+    getSum()  // NaN
+    document.write('----------')
+
+    // 形参可以看做是变量 但是如果一个变量不给值 默认是什么 undefined
+    // 但是如果用户不输入实参 刚才的案例 则出现的是undefined + undefined 结果就是NaN
+
+    // 我们可以改进一下 用户不输入实参 可以给形参默认值 可以默认为0 这样程序更严谨 可以如下操作
+    function getSum (x = 0, y = 0) {
+      document.write(x + y)
+    }
+    getSum()  // 结果是0 而不是NaN
+    getSum(1,2)  // 结果是3
+  </script>
+</body>
+
+</html>

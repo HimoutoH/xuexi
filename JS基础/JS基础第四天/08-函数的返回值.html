@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 当函数需要返回数据出去时 用return关键字
+    // 语法 
+    // return 数据
+    // 怎么使用呢
+    // function fn() {
+    //   return 20
+    // }
+    // // 相当于执行了fn() = 20
+    // // fn()调用者
+    // // console.log(fn())
+    // let re = fn()
+    // console.log(re)
+
+
+
+    // function prompt(str) {
+    //   return str
+    // }
+    // let num1 = prompt('请输入')  了解一下
+
+
+    // 求和函数的写法
+    // function getTotalPrice(x ,y) {
+    //   return x + y
+    // }
+    // let re = getTotalPrice(1,2)
+    // console.log(re)
+
+    // 在函数体重使用return关键字能将内部的执行结果交给函数外部使用
+    // return 后面的代码不会在被执行 会立即结束当前函数 所以return 后面的数据不要换行写
+    // return 函数可以没有return 这种情况函数默认返回值是undefined
+
+    function fn() {
+    }
+    let re = fn()
+    console.log(re)  // undefiend
+
+
+    // 为什么要让函数有返回值
+        // 函数执行后得到结果 结果是调用者想要拿到的(一句话 函数内部不需要输出结果 而是返回结果)
+        // 对执行结果的扩展性更高 可以让其他的程序使用这个结果
+
+    // 函数返回值用哪个关键字 有什么注意事项
+        // return 数据
+        // return后面不接数据或者函数内不写return 函数的返回值是undefined
+        // return能立即结束当前函数 所以return后面的数据不要换行写
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+      /*
+        变量声明有三个 var  let   const
+          我们应该先用那个呢
+          首先 var先排除 老派写法 问题很多 可以淘汰掉
+          let ver  const 
+            建议；const优先 尽量使用const 原因是
+              const语义化更好
+              很多变量我们声明的时候就知道他不会被更改 那为什么不同const呢
+              实际开发中也是 比如react框架基本 const
+
+
+              建议
+                有了变量先写const 如果发现他后面是被修改的 在改为 let 
+      */
+
+      const arr = ['red','pink']
+      arr.push('blue')
+      console.log(arr)
+      
+      // const 声明的值不能修改 而且const声明变量的时候需要里面进行初始化
+      // 但是对于引用数据类型 从事南通声明的变量 里面存的不是值 是地址
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <!-- 
+        表单(form)
+            - 表单用来将用户因袭提交给服务器
+        
+        使用form标签来创建一个表单
+            属性:
+                action 
+                    - 指定表单提交的地址
+
+            form只是定义了一个空表单
+                在form中还需要添加各种表单项
+    -->
+    <form action="./target.html">
+        <!--  
+            文本框
+                - 使用input标签创建一个文本框
+                - 它的type属性值时text
+            
+            如果希望表单中的数据会提交到服务器
+                必须为表单项指定一个name属性
+        -->
+        用户名 <input type="text" name="username"> <br> <br>
+        <!-- 
+            提交按钮
+                - 可以使用input来创建提交按钮
+                - 修改 text值 submit 就是提交按钮
+
+                可以通过value属性来修改提交按钮文字
+        
+        -->
+        <input type="submit" value="注册">
+        <!-- <button>点击</button>   自测也可以 -->
+    </form>
+</body>
+</html>

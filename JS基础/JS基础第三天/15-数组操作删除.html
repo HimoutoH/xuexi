@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // pop  shift  splice(删除的下标 删除几个) 删除数组
+    // 数组.pop()方法从数组中删除最后一个元素 并返回钙元素的值
+
+    // 语法 arr.pop()
+    // let arr = ['张飞','赵云']
+    // arr.pop(arr)  删除最后一个元素
+    // console.log(arr.pop())
+    // console.log(arr)
+
+    // 删除第一个元素 
+    let arr = ['red','green','blue']
+    // arr.shift ()  删除第一个
+    // arr.pop()  删除最后一个
+    // console.log(arr)
+
+    // splice()方法删除指定元素
+    // arr.splice(start, deleteCount)
+    // arr.splice(起始位置,删除几个元素)
+
+    // start起始位置
+      // 指定修改的开始位置 从下标0开始
+    // deleteCount
+      // 表示要移除的数组元素个数
+      // 可选的 如果省略则默认从起始位置删除到最后
+
+      arr.splice(0,2)
+      // arr.splice(0)  从red 索引号 删除到最后 全部删除
+      console.log(arr)
+
+  </script>
+</body>
+</html>

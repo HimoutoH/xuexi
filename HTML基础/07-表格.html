@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+
+<body>
+    <!-- 
+        表格
+            - 在网页中使用table标签来创建表格
+            - 表格的行数由tr的数量决定
+            - 表格的列数右rd最多的tr来决定
+
+            - table里面包含
+                - 在table使用tr表示表格中的一行
+                - 在tr使用td表示表格中的单元格  一行的几个列
+                - colspan 横向的合并单元格
+                - rowspan 竖向的合并单元格
+
+            - 在网页中表格主要用来显示一些结构的数据
+                - 课程表
+                - 对账单
+                - 报价单
+                - 人名单
+                .....
+    -->
+
+    <table border="1">
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+            <td>A4</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+            <!-- rowspan 竖向的合并单元格 -->
+            <td rowspan="2">B4</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>
+            <!-- <td>C4</td> -->
+        </tr>
+        <tr>
+            <td>D1</td>
+            <td>D2</td>
+            <!-- colspan 横向合并单元格 -->
+            <td colspan="2">D3</td>
+            <!-- <td>D4</td> -->
+        </tr>
+    </table>
+
+
+    <!--
+        长表格
+    -->
+    <br><br><br><br><br>
+    <table border="1">
+        <!-- 
+            <thead></thead>
+                - thead表示表格的头部 用来放tr
+            <tbody></tbody>
+                - tbody表示表格的内容 
+            <tfoot></tfoot>
+                - tfoot表示表格的底部
+            <th></th>
+                - th 表示的是表头的单元格
+            <caption></caption>
+                caption 用来设置表格的标题
+            
+        -->
+        <caption>
+            学生名单
+        </caption>
+        <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>住址</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>孙悟空</td>
+                <td>男</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>猪八戒</td>
+                <td>男</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>沙和尚</td>
+                <td>男</td>
+                <td>38</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>合计</td>
+                <td>3人</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

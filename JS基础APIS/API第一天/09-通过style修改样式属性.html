@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 50px;
+      height: 50px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    // 还可以通过js设置修改标签元素样式属性
+    // 比如通过轮播图小圆点自动更换颜色样式
+    // 点击按钮可以滚动图片 这是移动的图片的位置left等等
+    
+  // 通过style属性操作css
+  // 操作类名(className)操作css
+  // 通过classList操作控制css
+
+  // 通过style 属性操作css
+  // 语法：
+    // 对象.style.样式属性 = 新值
+
+
+    // 1. 获取元素
+    const box = document.querySelector('.box')
+    // 修改style样式  500px  别忘了跟单位
+    box.style.width = '500px'
+    box.style.height = '500px'
+    // 修改这种的不能用background-color  要用小驼峰命名法
+    box.style.backgroundColor = 'hotpink'
+    box.style.border = '2px solid blue'
+    box.style.borderTop = '5px solid red'
+  </script>
+</body>
+</html>

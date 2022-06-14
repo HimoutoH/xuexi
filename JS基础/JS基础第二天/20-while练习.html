@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // 使用while循环 页面打印可以添加换行效果
+    // 页面输出1-100
+    // 计算从1加到100的总和并输出
+    // 计算1-100之间的所有偶数和
+        // 1
+    // let i = 1
+    // while(i <=100) {
+    //   document.write(`我是第${i}次 <br>`)
+    //   i++
+    // }
+        // 2  1到100的和
+      // let i = 1
+      // let sum = 0
+      // while(i <= 100) {
+      //   sum = sum + i
+      //   i++
+      // }
+      // console.log(sum)
+
+      // 3    1到100之间的偶数和
+      let i = 1
+      let sum = 0
+    while(i <= 100 ) {
+      if (i % 2 === 0)  {
+        // sum = sum + i
+        sum += i
+      }
+      i++
+    }
+      console.log(sum);
+  </script>
+</body>
+</html>

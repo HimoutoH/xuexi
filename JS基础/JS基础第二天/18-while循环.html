@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // while 循环
+      // 循环 重复执行一些操作 while：在...期间，所以while循环就是在满足条件期间 重复执行某些代码
+      // 比我我们运行相同的代码输入5次 (输出5句 你学的很棒)
+      // while循环语法：
+          // while (循环条件)
+            // 重复执行要循环的代码
+      // while循环三要素
+        // 循环的本质就是以某种变量为起始值 然后不断产生变化量 慢慢考进终止条件的过程
+          // 所以while循环需要三要素
+            // 变量起始值
+            // 终止条件 (没有终止条件会一直执行 造成死循环)
+            // 变量变化量(用自增或者自减)
+
+
+    // 释义 
+      // 跟if语句很像 都要满足小括号里面的条件为true才会进入循环体执行代码
+      // while大括号里代码执行完毕后不会跳出 而是继续回到小括号里面判断条件是否满足
+        // 若满足又执行大括号里面的代码 然后再回到小括号里面判断条件
+          // 直到括号内条件不满足 即退出循环
+            
+          /*
+            let i = 1
+            while(i <=3) {
+              document.write('我会循环三次')
+              i++
+            }
+          */
+          let i = 1
+          while (i <=3) {
+            document.write('我会循环三次 <br>')
+            i++
+          }
+
+          // for(let i = 1; i <= 3; i++) {
+          //   console.log('我会执行几次呢？');
+          // }
+  </script>
+</body>
+</html>

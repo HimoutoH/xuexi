@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签分类</title>
+</head>
+<body>
+    <!--
+        块元素(block)
+            - 块元素会独占一行
+            - 例子
+                header main footer h1~h6  p   .....
+                div
+            -- 在网页中块元素主要用来对网页布局
+                使用块元素将网页分成一块一块的
+        行内元素(inline)
+            - 行内元素只会占用自身大小 不会独占页面一行
+            - 例子
+                a b(加粗) i(斜体) em... 
+                span
+            - 行内元素主要用来选中文字
+            - span是一个行内元素 没有特殊意义
+                通常可以用span来选中文字进而为其设置样式
+
+            替换元素
+                - 替换元素，一般用来表示网页图片 音频 视频 表单项之类
+                - 替换的元素兼具了快和行内的特点
+                - 例子
+                    img inpit select button 
+
+
+
+            嵌套规则
+                -在开发中通常使用块元素进行布局
+                    块元素中可以包含块元素 也可以包含行内元素
+                - 在开发中行内元素通常用来选中文字 为文字设置样式
+                    行内元素可以嵌套行内元素，不建议嵌套快元素
+                - 特殊情况
+                    1. p元素中不能放块元素
+                    2. 超链接可以放任何元素除了他自身
+    -->
+    <header>头部</header>
+    <main>内部</main>
+    <footer>底部</footer>
+    <p>你好a</p>
+
+    <br><br><br>
+
+    <a href="#">我是一个超链接</a>
+    <a href="#">我是一个超链接</a>
+    <em>你好</em>
+    <em>你好</em>
+    <i>你好</i>
+    <i>你好</i>
+    <b>你好</b>
+    <b>你好</b>
+    <span>你好</span>
+    <span>你好</span>
+    
+</body>
+</html>
